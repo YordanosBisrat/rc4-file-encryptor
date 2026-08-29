@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define KEY "MySecretKey123"   // Same key must be used in decryptor.c
+#define KEY "MySecretKey123"   
 
 // ---- RC4 KSA ----
 void rc4_ksa(unsigned char *key, int key_len, unsigned char *S) {

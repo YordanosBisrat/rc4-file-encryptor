@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define KEY "MySecretKey123"   // MUST match encryptor.c exactly
+#define KEY "MySecretKey123"   
 
 void rc4_ksa(unsigned char *key, int key_len, unsigned char *S) {
     for (int i = 0; i < 256; i++) S[i] = i;
@@ -67,7 +67,7 @@ int main(void) {
     unsigned char S[256];
     unsigned char key[] = KEY;
     rc4_ksa(key, (int)strlen((char *)key), S);
-    rc4_crypt(S, buffer, file_size);   // same operation reverses encryption
+    rc4_crypt(S, buffer, file_size);   
 
     FILE *fp_out = fopen(filename, "wb");
     if (fp_out == NULL) {
