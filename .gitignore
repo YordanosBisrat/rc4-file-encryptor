@@ -1,0 +1,4 @@
+*.exe
+*.o
+file.txt
+backup.txt
